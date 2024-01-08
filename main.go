@@ -11,6 +11,8 @@ import (
 )
 
 func main() {
+	// REPLACE "google-service-key.json" to correct path private key file
+	// visit https://firebase.google.com/docs/cloud-messaging/auth-server#provide-credentials-manually
 	opt := option.WithCredentialsFile("google-service-key.json")
 	app, err := firebase.NewApp(context.Background(), &firebase.Config{}, opt)
 	if err != nil {
@@ -34,7 +36,7 @@ func main() {
 		// "YOUR_REGISTRATION_TOKEN_n",
 	}
 
-	topic := "test"
+	topic := "test_topic" // if topic not existed, will be created
 
 	// Subscribe the devices corresponding to the registration tokens to the
 	// topic.
@@ -51,10 +53,11 @@ func main() {
 		Data: map[string]string{
 			"score":   "850",
 			"time":    "2:45",
-			"message": "hello world",
+			"message": "Hello world!",
 		},
-		Token: registrationToken,
-		// Topic: "test",
+		// switch between send message to individual client or topic (grouped clients)
+		// Token: registrationToken,
+		Topic: "test_topic",
 	}
 
 	// Send a message to the device corresponding to the provided
