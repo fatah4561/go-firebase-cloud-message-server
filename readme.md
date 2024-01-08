@@ -17,7 +17,7 @@ Before starting replace the "google-service-key.json" to correct path private ke
 opt := option.WithCredentialsFile("google-service-key.json")
 ```
 
-Also replace the registration tokens "CLIENT_REGISTRATION_TOKEN" with yours registration token in main.go
+Also replace the registration token "CLIENT_REGISTRATION_TOKEN" with yours registration token in main.go
 
 ```go
 // This registration token comes from the client FCM SDKs. Check about section in readme if you need client apps
