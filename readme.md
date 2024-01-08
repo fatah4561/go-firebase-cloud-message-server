@@ -1,6 +1,6 @@
 # About
 
-Simple quickstart google cloud message server using go programming language / golang, **this is
+Simple quickstart google firebase cloud message server using go programming language / golang, **this is
 the server** (to send the messages) if you need client apps visit [firebase github](https://github.com/firebase):
 
 - [Android firebase client apps](https://github.com/firebase/quickstart-android)
