@@ -26,17 +26,17 @@ func main() {
 		log.Fatalf("error getting Messaging client: %v\n", err)
 	}
 
-	// This registration token comes from the client FCM SDKs.
-	registrationToken := "fsMLKzDRQRSX7ZCupOrMM5:APA91bHumlUCdRzW4RPVMP_bOn0-xmFS1aAEyrjsWHNcFkWk6V3bat6yaSomwbE04HGj7AjikU_O1WPUXf9k8XWzRaoZyECoETqAJSt77GmS0i6ddDl7aENRSl40NtIZBm0cSlZX7yy4"
+	// This registration token comes from the client FCM SDKs. Check about section in readme if you need client apps
+	registrationToken := "CLIENT_REGISTRATION_TOKEN"
 
-	// These registration tokens come from the client FCM SDKs.
+	// These registration tokens come from the client FCM SDKs. Check about section in readme if you need client apps
 	registrationTokens := []string{
 		registrationToken,
 		// ...
 		// "YOUR_REGISTRATION_TOKEN_n",
 	}
 
-	topic := "test_topic" // if topic not existed, will be created
+	topic := "test_topic" // topic will be created if not exists
 
 	// Subscribe the devices corresponding to the registration tokens to the
 	// topic.
@@ -55,7 +55,7 @@ func main() {
 			"time":    "2:45",
 			"message": "Hello world!",
 		},
-		// switch between send message to individual client or topic (grouped clients)
+		// switch between send message to individual client (Token), or Topic (grouped clients)
 		// Token: registrationToken,
 		Topic: "test_topic",
 	}
