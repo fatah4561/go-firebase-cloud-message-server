@@ -24,7 +24,7 @@ Also replace the registration tokens "CLIENT_REGISTRATION_TOKEN" with yours regi
 registrationToken := "CLIENT_REGISTRATION_TOKEN"
 ```
 
-If you want to send message to multiple clients / topcis, add tokens here
+If you want to send message to multiple clients / topcis, add tokens here in main.go
 
 ```go
 // These registration tokens come from the client FCM SDKs. Check about section in readme if you need client apps
